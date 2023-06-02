@@ -37,10 +37,19 @@ const WelcomeModal = ({ handlePlay }) => {
       <Container>
         <Row className='justify-content-center'>
           <div style={{ textAlign: 'center' }}>
-            <div>
-              <div>
+            <div className="m-4">
+            <h5 className='animate-box' data-animate-effect='fadeInUp'>
+              Reception
+            </h5>
+            <h1  className='oliven-couple-title' data-animate-effect='fadeInUp'>
+              Rahimie & Syafiqah
+            </h1>
+            <h5 className='animate-box' data-animate-effect='fadeInUp'>
+              10 June, 2023
+            </h5>
+              {/* <div>
                 <div>
-                  <h4 >Walimatulurus</h4>		
+                  <h4 >Reception</h4>	
                 </div>
               </div>
               <div>
@@ -58,7 +67,7 @@ const WelcomeModal = ({ handlePlay }) => {
               <div>
                 <div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </Row>

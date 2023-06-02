@@ -1,15 +1,15 @@
 import { useEffect, useRef } from 'react';
-import Bridegroom from './components/Bridegroom';
+import Welcoming from './components/Welcoming';
 import Countdown from './components/Countdown';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import Header from './components/Header';
 import Organization from './components/Organization';
-import RSVP from './components/RSVP';
+import Seating from './components/Seating';
 import Seeyou from './components/Seeyou';
 import Sidebar from './components/Sidebar';
 import Story from './components/Story';
-import Where from './components/Where';
+import Information from './components/Information';
 import audioFile from '../src/assets/audio/audio.mp3';
 
 
@@ -46,6 +46,7 @@ import 'popper.js/dist/popper.min.js';
 import 'bootstrap-fileinput/js/fileinput.min.js';
 // import 'bootstrap-fileinput/themes/fas/theme.min.js';
 import 'bootstrap-fileinput/js/locales/LANG.js';
+import WelcomeModal from './components/WelcomeModal';
 
 var pdfMake = require('pdfmake/build/pdfmake.js');
 var pdfFonts = require('pdfmake/build/vfs_fonts.js');
@@ -56,36 +57,38 @@ function App() {
   const audioRef = useRef(null);
 
 
+  // const handlePlay = () => {
+  //   audioRef.current.play().catch((error) => {
+  //     // Handle playback error if needed
+  //     console.error('Failed to play audio:', error);
+  //   });
+  // };
+
+
   const handlePlay = () => {
-    audioRef.current.play().catch((error) => {
-      // Handle playback error if needed
-      console.error('Failed to play audio:', error);
-    });
+    audioRef.current.play();
   };
 
-  useEffect(() => {
-    handlePlay();
-  }, []);
+
+  // useEffect(() => {
+  //   // handlePlay();
+  // }, []);
 
   return (
     <>
-    
+      <WelcomeModal handlePlay={handlePlay} />
       <audio ref={audioRef} src={audioFile} />
       <Sidebar />
       <div id='oliven-main'>
         <Header />
-        <Bridegroom />
+        <Welcoming />
         <Countdown />
-    
-        
-        <Where />
-        {/* <Organization /> */}
+        <Information />
         <Seeyou />
-        <RSVP />
+        <Seating />
+        {/* <Organization /> */}
         {/* <Story /> */}
         {/* <Gallery /> */}
-
-
         <Footer />
       </div>
     </>

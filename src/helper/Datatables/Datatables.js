@@ -75,6 +75,7 @@ export const DatatablesEmpty = props => {
 
         $('#' + tableId).DataTable({
             responsive: true,
+            scrollX: true,
             language: getLanguage()
         });
 

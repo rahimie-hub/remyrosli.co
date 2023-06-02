@@ -30,8 +30,8 @@ export const getButtons = (columns, title) => {
                 columns: columns, // REFER HERE -> https://datatables.net/extensions/buttons/examples/html5/columns.html
             },
             title: title,
-            messageTop: '*Hak Milik Majlis Perbandaran Klang*',
-            messageBottom: '*Hak Milik Majlis Perbandaran Klang*'
+            messageTop: '*',
+            messageBottom: ''
         },
         {
             extend: 'pdfHtml5',
@@ -42,8 +42,8 @@ export const getButtons = (columns, title) => {
                 columns: columns,
             },
             title: title,
-            messageTop: '*Hak Milik Majlis Perbandaran Klang*',
-            messageBottom: '*Hak Milik Majlis Perbandaran Klang*',
+            messageTop: '',
+            messageBottom: '',
         },
         {
             dom: 'Bfrtip',
@@ -55,83 +55,35 @@ export const getButtons = (columns, title) => {
             },
             orientation: 'landscape',
             title: title,
-            messageTop: '*Hak Milik Majlis Perbandaran Klang*',
-            messageBottom: '*Hak Milik Majlis Perbandaran Klang*'
+            messageTop: '',
+            messageBottom: ''
         },
         // 'colvis'
     ];
 }
 
-export const getButtonsCustom = (columns, title, excel, pdf,print,copy, custombutton1,custombutton2) => {
-    return [
-        {
-            extend: 'excelHtml5',
-            className:'hidden',
-            footer: true,
-            exportOptions: {
-                columns: columns, // REFER HERE -> https://datatables.net/extensions/buttons/examples/html5/columns.html
-            },
-            title: title,
-            messageTop: '*Hak Milik Majlis Perbandaran Klang*',
-            messageBottom: '*Hak Milik Majlis Perbandaran Klang*'
-        },
-        {
-            extend: 'pdfHtml5',
-            className: 'hidden',
-            footer: true,
-            orientation: 'landscape',
-            pageSize: 'A4',
-            exportOptions: {
-                columns: columns,
-            },
-            title: title,
-            messageTop: '',
-            messageBottom: ''
-        },
-        {
-            extend: 'print',
-            className:'hidden',
-            footer: true,
-            text: 'Cetak',
-            exportOptions: {
-                columns: columns,
-            },
-            title: title,
-            messageTop: '*Hak Milik Majlis Perbandaran Klang*',
-            messageBottom: '*Hak Milik Majlis Perbandaran Klang*',
-        },
-        {
-            text: custombutton1?custombutton1.text:'Button 1',
-            className: custombutton1?'':'hidden',
-            action: function ( e, dt, button, config ) {
-              window.open(custombutton1?custombutton1.link:'Button 1');
-            }        
-        }
-    ];
-}
-
 export const getLanguage = () => {
     return {
-        "sEmptyTable": "Tiada data",
-        "sInfo": "Paparan dari _START_ hingga _END_ dari _TOTAL_ rekod",
-        "sInfoEmpty": "Paparan 0 hingga 0 dari 0 rekod",
-        "sInfoFiltered": "(Ditapis dari jumlah _MAX_ rekod)",
+        "sEmptyTable": "No Data",
+        "sInfo": " _START_ to _END_ from _TOTAL_ record",
+        "sInfoEmpty": "",
+        "sInfoFiltered": "(Filter from total _MAX_ record)",
         "sInfoPostFix": "",
         "sInfoThousands": ",",
-        "sLengthMenu": "Papar _MENU_ rekod",
-        "sLoadingRecords": "Diproses...",
-        "sProcessing": "Sedang diproses...",
-        "sSearch": "Carian:",
-        "sZeroRecords": "Tiada padanan rekod yang dijumpai.",
+        "sLengthMenu": "_MENU_ record",
+        "sLoadingRecords": "Processing...",
+        "sProcessing": "",
+        "sSearch": "Search:",
+        "sZeroRecords": "No record found",
         "oPaginate": {
-            "sFirst": "Pertama",
-            "sPrevious": "Sebelum",
-            "sNext": "Kemudian",
-            "sLast": "Akhir"
+            "sFirst": "",
+            "sPrevious": "",
+            "sNext": "",
+            "sLast": ""
         },
         "oAria": {
-            "sSortAscending": ": diaktifkan kepada susunan lajur menaik",
-            "sSortDescending": ": diaktifkan kepada susunan lajur menurun"
+            "sSortAscending": ":",
+            "sSortDescending": ":"
         },
         'bProcessing': "true"
     }

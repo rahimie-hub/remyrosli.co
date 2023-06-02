@@ -2,7 +2,7 @@ import React from 'react'
 import where1 from '../assets/images/where-1.jpg'
 import where2 from '../assets/images/where-2.jpg'
 import where3 from '../assets/images/where-3.jpg'
-function Where() {
+function Information() {
   return (
     <div id='story' className='whenwhere section-padding bg-pink'>
       <div className='container'>
@@ -22,6 +22,7 @@ function Where() {
         <div className='row'>
           <div className='item col-12 col-md-3 mb-3'>
             <div className='content'>
+              <h2 className='custom-font numb'>01</h2>
               <h5>Venue & Time</h5>
               <p>
                 <i className='ti-location-pin'></i>
@@ -59,10 +60,11 @@ function Where() {
           </div>
           <div className='item col-12 col-md-3 mb-3'>
             <div className='content'>
+              <h2 className='custom-font numb'>02</h2>
               <h5>IMPORTANT</h5>
               <p>
                 <i className='ti-location-pin'></i>
-                Para jemputan diharap berada di tempat duduk sebelum jam 8.10 mlm / Please be seated before 8.10pm
+                 Please be seated before 8.10pm / Para jemputan diharap berada di tempat duduk sebelum jam 8.10 mlm 
               </p>
 
               {/* <p>
@@ -72,10 +74,11 @@ function Where() {
           </div>
           <div className='item col-12 col-md-3 mb-3'>
             <div className='content'>
+              <h2 className='custom-font numb'>03</h2>
               <h5>PARKING</h5>
               <p>
                 <i className='ti-location-pin'></i>
-                Tempat letak kereta terhad didalam kawasan hotel. Kereta boleh ditempatkan di kawasan luar hotel dan buggy disediakan oleh pihak hotel untuk para jemputan / Parking is limited inside the hotel area. Cars can be parked outside the hotel area and buggy will be provided by the hotel for the guests
+                Parking is limited inside the hotel area. Cars can be parked outside the hotel area and buggy will be provided by the hotel for the guests / Tempat letak kereta terhad didalam kawasan hotel. Kereta boleh ditempatkan di kawasan luar hotel dan buggy disediakan oleh pihak hotel untuk para jemputan
               </p>
               {/* <p>
                 <i className='ti-time'></i> <span></span>
@@ -85,10 +88,11 @@ function Where() {
 
           <div className='item col-12 col-md-3 mb-3'>
             <div className='content'>
+              <h2 className='custom-font numb'>04</h2>
               <h5>SEATING</h5>
               <p>
                 <i className='ti-location-pin'></i>
-                Sila pastikan tuan puan sedia maklum dengan nomber meja yg ditetapkan / Please be seated according to the table number given
+                Please be seated according to the table number given / Sila pastikan tuan puan sedia maklum dengan nomber meja yg ditetapkan
               </p>
               {/* <p>
                 <i className='ti-time'></i> <span></span>
@@ -135,4 +139,4 @@ function Where() {
   )
 }
 
-export default Where
+export default Information

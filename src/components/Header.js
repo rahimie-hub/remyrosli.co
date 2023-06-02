@@ -13,7 +13,7 @@ function Header () {
               Rahimie & Syafiqah
             </h1>
             <h5 className='animate-box' data-animate-effect='fadeInUp'>
-              10 June, 2023 – The Ligh Hotel, Penang
+              10 June, 2023 – The Light Hotel, Penang
             </h5>
           </div>
         </div>
