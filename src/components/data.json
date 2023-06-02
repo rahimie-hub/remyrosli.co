@@ -1,0 +1,12 @@
+[
+    {
+      "nama": "John",
+      "noTelefon": "123456789",
+      "noMeja": "A1"
+    },
+    {
+      "nama": "Jane",
+      "noTelefon": "987654321",
+      "noMeja": "B2"
+    }
+]
