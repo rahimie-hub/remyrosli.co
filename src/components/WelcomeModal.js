@@ -34,10 +34,13 @@ const WelcomeModal = ({ handlePlay }) => {
       maximizable modal 
 
     >
+
+
       <Container>
         <Row className='justify-content-center'>
           <div style={{ textAlign: 'center' }}>
             <div className="m-4">
+         
             <h5 className='animate-box' data-animate-effect='fadeInUp'>
               Reception
             </h5>
@@ -47,6 +50,9 @@ const WelcomeModal = ({ handlePlay }) => {
             <h5 className='animate-box' data-animate-effect='fadeInUp'>
               10 June, 2023
             </h5>
+            <h6 className='animate-box' data-animate-effect='fadeInUp'>
+            "Your response is greatly appreciated, and we are honored by your desire to attend our event!"
+            </h6>
               {/* <div>
                 <div>
                   <h4 >Reception</h4>	
