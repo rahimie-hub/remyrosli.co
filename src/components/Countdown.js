@@ -7,7 +7,7 @@ function Countdown () {
             minute = second * 60,
             hour = minute * 60,
             day = hour * 24;
-      let birthday = "June 10, 2023 21:15:00",
+      let birthday = "June 10, 2023 20:15:00",
           countDown = new Date(birthday).getTime(),
           x = setInterval(function() {    
             let now = new Date().getTime(),
