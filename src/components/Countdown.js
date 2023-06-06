@@ -7,7 +7,8 @@ function Countdown () {
             minute = second * 60,
             hour = minute * 60,
             day = hour * 24;
-      let birthday = "June 10, 2023 20:15:00",
+          // let birthday = "June 6, 2023 16:10:00",
+          let birthday = "June 10, 2023 20:15:00",
           countDown = new Date(birthday).getTime(),
           x = setInterval(function() {    
             let now = new Date().getTime(),
@@ -24,9 +25,9 @@ function Countdown () {
                   countdown = document.getElementById("countdown"),
                   content = document.getElementById("content");
     
-              headline.innerText = "It's our wedding!";
-              countdown.style.display = "none";
-              content.style.display = "block";
+              // headline.innerText = "It's our wedding!";
+              // countdown.style.display = "none";
+              // content.style.display = "block";
     
               clearInterval(x);
             }
