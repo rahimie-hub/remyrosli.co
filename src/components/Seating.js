@@ -106,7 +106,7 @@ function Seating() {
         const distanceX = Math.abs(table.x);
         const distanceY = Math.abs(table.y);
         
-        setInstructions(`Hello, from Main Entrance, to go to table ${table.name}, Go ${distanceX} table ${directionX}, And ${distanceY} table ${directionY}.`);
+        setInstructions(`Hello, from main entrance, to go to table ${table.name}, Go ${distanceX} table ${directionX}, and ${distanceY} table ${directionY}.`);
 
         console.log(instructions);
       }
