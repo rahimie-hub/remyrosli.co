@@ -220,7 +220,7 @@ function Seating() {
                     <ul>
                       {matchingEntries.map((entry) => (
                         <li key={entry.no}>
-                          Name: {entry.nama}, Table No: {entry.noMeja}
+                          Name: <b>{entry.nama.toUpperCase()}</b> , Table No: <b>{entry.noMeja}</b>
                         </li>
                       ))}
                     </ul>

@@ -23,7 +23,7 @@ const GenerateDatatables = () => {
         {jsonData.map((data, index) => (
           <tr key={index}>
             <td>{index + 1}</td>
-            <td>{data.nama}</td>
+            <td>{data.nama.toUpperCase()}</td>
             {/* <td>{data.noTelefon}</td> */}
             <td>{data.noMeja}</td>
             {/* <td className="text-nowrap text-center"></td> */}
