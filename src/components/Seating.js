@@ -22,6 +22,10 @@ function Seating() {
   const [instructions, setInstructions] = useState('');
   const [matchingEntries, setMatchingEntries] = useState([]);
 
+
+  const [passcodeNo, setPasscodeNo] = useState('');
+
+
   const calculateLevenshteinDistance = (str1, str2) => {
     const levDistance = natural.LevenshteinDistance(str1, str2);
     return levDistance;
@@ -167,6 +171,14 @@ function Seating() {
     event.preventDefault(); // Prevent form submission
   };
 
+  
+  const passcode = (event) => {
+    const enteredName = event.target.elements.name.value.toUpperCase();
+    console.log(enteredName);
+    setPasscodeNo(enteredName);
+    event.preventDefault(); // Prevent form submission
+  };
+
   // const findSeat = (event) => {
   //   event.preventDefault(); // Prevent form submission
   //   const enteredName = event.target.elements.name.value;
@@ -244,20 +256,6 @@ function Seating() {
           <div className='col-md-6 bg-white p-40'>
             {/* <h2 className='oliven-title text-center'>Guest List</h2> */}
             <br />
-
-            <div className='row'>
-              <div className='col-m-3 '>
-                <Card className='p-5'>
-                  {/* <h5 className='text-center'>Guest List</h5> */}
-                  <span className='oliven-title-meta text-center'>Our Guest List</span>
-                  <p className='card-text text-center'>
-                    {/* Guest List */}
-                  </p>
-                  <GenerateDatatables />
-                </Card>
-              </div>
-            </div>
-
             <div className='row mt-3'>
               <div className='col-m-3 '>
                 <Card className='p-5'>
@@ -281,6 +279,36 @@ function Seating() {
                       </div>
                     </div>
                   </a>
+                </Card>
+              </div>
+            </div>
+            
+            <div className='row'>
+              <div className='col-m-3 '>
+                <Card className='p-5'>
+                  <span className='oliven-title-meta text-center'>Our Guest List</span>
+                  <p className='card-text text-center'>
+                  </p>
+                  {passcodeNo==="150397" ? <GenerateDatatables />:<p className='text-center'>Please enter passcode to view guest list</p>}
+                  {/* <GenerateDatatables /> */}
+                  <form className='row' onSubmit={passcode}>
+                    <div className='col-md-12'>
+                      <div className='form-group'>
+                        <input
+                          type='text'
+                          className='form-control'
+                          placeholder='passcode'
+                          required
+                          name='name'
+                        />
+                      </div>
+                    </div>
+                    <div className='col-md-12'>
+                      <div className='form-group'>
+                        <input type='submit' className='btn buttono' value='Enter' />
+                      </div>
+                    </div>
+                  </form>
                 </Card>
               </div>
             </div>
