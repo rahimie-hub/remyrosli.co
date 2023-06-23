@@ -24,14 +24,14 @@ function Gallery () {
             <div className='gallery-box text-center'>
               <iframe
                 src="https://drive.google.com/file/d/16-IwJJz0Zrg7Yir_wSi-xH5Fa785QojL/preview"
-                width="500"
-                height="400"
+                width="380"
+                height="280"
                 title="Embedded video"
                 frameBorder="0"
                 allow="autoplay; fullscreen"
                 allowFullScreen
-                autoplay
-                muted
+                // autoplay
+                // muted
               ></iframe>
             </div>
           </div>
