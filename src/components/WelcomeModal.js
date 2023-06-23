@@ -8,12 +8,13 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import { Dialog } from 'primereact/dialog';
 
-const WelcomeModal = ({ handlePlay }) => {
+const WelcomeModal = ({ handlePlay,playVideo }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   function closeModal() {
     setIsOpen(false);
     handlePlay();
+    // playVideo();
   }
   const styles = {
     position: 'absolute',

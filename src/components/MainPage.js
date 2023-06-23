@@ -55,7 +55,7 @@ window.JSZip = JSZip;
 
 function MainPage() {
   const audioRef = useRef(null);
-
+  const videoRef = useRef(null);
 
   // const handlePlay = () => {
   //   audioRef.current.play().catch((error) => {
@@ -70,13 +70,20 @@ function MainPage() {
   };
 
 
+
+  const playVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+    }
+  };
+
   // useEffect(() => {
   //   // handlePlay();
   // }, []);
 
   return (
     <>
-      <WelcomeModal handlePlay={handlePlay} />
+      <WelcomeModal handlePlay={handlePlay}/>
       <audio ref={audioRef} src={audioFile} />
       <Sidebar />
       <div id='oliven-main'>
@@ -86,7 +93,7 @@ function MainPage() {
         {/* <Information /> */}
         {/* <Seeyou /> */}
         {/* <Seating /> */}
-        <Gallery />
+        <Gallery/>
         <Footer />
       </div>
     </>
