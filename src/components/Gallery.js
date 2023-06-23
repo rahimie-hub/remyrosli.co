@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import ReactPlayer from 'react-player';
 import gallery1 from '../assets/images/1.jpg'
 import gallery2 from '../assets/images/2.jpg'
 import gallery3 from '../assets/images/3.jpg'
 import gallery4 from '../assets/images/4.jpg'
 import gallery5 from '../assets/images/5.jpg'
 import gallery6 from '../assets/images/6.jpg'
+import { Row } from 'react-bootstrap'
 function Gallery () {
+  const videoRef = useRef(null);
 
+  const playVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.src = "https://drive.google.com/file/d/16-IwJJz0Zrg7Yir_wSi-xH5Fa785QojL/preview";
+      console.log("play video")
+    }
+  };
   
   return (
     <div id='gallery' className='section-padding'>
@@ -14,15 +23,21 @@ function Gallery () {
         <div className='row'>
           <div className='col-md-12 mb-30'>
             <span className='oliven-title-meta'>Gallery</span>
-            <h2 className='oliven-title'>Photo & Video</h2>
+            <h2 className='oliven-title'>Video & Photo</h2>
           </div>
         </div>
       </div>
       <div className='container'>
         <div className='row gallery-filter mt-3'>
+        {/* <div className='col-md-12 gallery-item ceremony'>
+            <div className='gallery-box text-center'>
+            <button onClick={playVideo}>Play Video</button>
+            </div>
+          </div> */}
         <div className='col-md-12 gallery-item ceremony'>
             <div className='gallery-box text-center'>
-              <iframe
+            {/* <button onClick={""}>Play Video</button> */}
+              {/* <iframe
                 src="https://drive.google.com/file/d/16-IwJJz0Zrg7Yir_wSi-xH5Fa785QojL/preview"
                 width="380"
                 height="280"
@@ -30,10 +45,15 @@ function Gallery () {
                 frameBorder="0"
                 allow="autoplay; fullscreen"
                 allowFullScreen
-                // autoplay
+                ref={videoRef}
+                autoplay
                 // muted
-              ></iframe>
+              ></iframe> */}
+              <iframe src="https://drive.google.com/file/d/16-IwJJz0Zrg7Yir_wSi-xH5Fa785QojL/preview" width="300" height="200" allow="autoplay"></iframe>
             </div>
+            {/* <Row className='justify-content-center'>
+              <button className="button-1 ml-12 mr-5 mb-5" onClick={""}>Play</button>
+            </Row> */}
           </div>
 
           <div className='col-md-4 gallery-item ceremony'>
