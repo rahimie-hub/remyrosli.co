@@ -32,21 +32,25 @@ function Sidebar () {
             <li>
               <a href='#couple'>Welcoming</a>
             </li>
-            <li>
+            {/* <li>
               <a href='#story'>Information</a>
-            </li>
+            </li> */}
             {/* <li>
               <a href='#organization'>Organization</a>
             </li> */}
+        
             {/* <li>
-              <a href='#gallery'>Gallery</a>
-            </li>
-            <li>
               <a href='#whenwhere'>Vanue</a>
             </li> */}
-            <li>
+            {/* <li>
               <a href='#table'>Seating</a>
+            </li> */}
+            <li>
+              <a href='#gallery'>Gallery</a>
             </li>
+            {/* <li>
+              <a href='#gallery'>Photo</a>
+            </li> */}
           </ul>
         </nav>
         <div className='footer1'>

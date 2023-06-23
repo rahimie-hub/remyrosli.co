@@ -47,6 +47,9 @@ import 'bootstrap-fileinput/js/fileinput.min.js';
 // import 'bootstrap-fileinput/themes/fas/theme.min.js';
 import 'bootstrap-fileinput/js/locales/LANG.js';
 import WelcomeModal from './components/WelcomeModal';
+import MainPage from './components/MainPage';
+import Routes from './Routes';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 var pdfMake = require('pdfmake/build/pdfmake.js');
 var pdfFonts = require('pdfmake/build/vfs_fonts.js');
@@ -76,7 +79,10 @@ function App() {
 
   return (
     <>
-      <WelcomeModal handlePlay={handlePlay} />
+     <Router basename={process.env.PUBLIC_URL}>
+      <Routes />
+     </Router>
+      {/* <WelcomeModal handlePlay={handlePlay} />
       <audio ref={audioRef} src={audioFile} />
       <Sidebar />
       <div id='oliven-main'>
@@ -86,11 +92,9 @@ function App() {
         <Information />
         <Seeyou />
         <Seating />
-        {/* <Organization /> */}
-        {/* <Story /> */}
-        {/* <Gallery /> */}
+        <Gallery />
         <Footer />
-      </div>
+      </div> */}
     </>
   );
 }

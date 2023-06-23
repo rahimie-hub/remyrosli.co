@@ -12,7 +12,7 @@ function Gallery () {
         <div className='row'>
           <div className='col-md-12 mb-30'>
             <span className='oliven-title-meta'>Gallery</span>
-            <h2 className='oliven-title'>Our Memories</h2>
+            <h2 className='oliven-title'>Photo</h2>
           </div>
         </div>
       </div>

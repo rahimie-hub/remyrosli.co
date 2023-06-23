@@ -238,11 +238,6 @@ function Seating() {
                     </ul>
                   </div>
                 )}
-                {/* {name && (
-                  <p>
-                    Hello, {dataName}! Your table no is <strong>{tableNo}</strong>.
-                  </p>
-                )} */}
                    {instructions && (
                   <p className='text-center'>
                     {instructions}
@@ -252,17 +247,14 @@ function Seating() {
             </div>
           </div>
         </div>
-        <div className='row justify-content-center'>
+        {/* <div className='row justify-content-center'>
           <div className='col-md-6 bg-white p-40'>
-            {/* <h2 className='oliven-title text-center'>Guest List</h2> */}
             <br />
             <div className='row mt-3'>
               <div className='col-m-3 '>
                 <Card className='p-5'>
                   <span className='oliven-title-meta text-center'>Table Layout</span>
-                  {/* <h5 className='text-center mt-5'>Table Layout</h5> */}
                   <p className='card-text text-center'>
-                    {/* Layout */}
                   </p>
                   <a href='/' className='img-zoom'>
                     <div className='gallery-box'>
@@ -290,7 +282,6 @@ function Seating() {
                   <p className='card-text text-center'>
                   </p>
                   {passcodeNo==="150397" ? <GenerateDatatables />:<p className='text-center'>Please enter passcode to view guest list</p>}
-                  {/* <GenerateDatatables /> */}
                   <form className='row' onSubmit={passcode}>
                     <div className='col-md-12'>
                       <div className='form-group'>
@@ -313,7 +304,7 @@ function Seating() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
     </div>

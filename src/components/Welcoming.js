@@ -18,7 +18,7 @@ function Welcoming() {
               <div className='info valign'>
                 <div className='full-width'>
                   <h6>
-                    Dato Seri Rosli Bin Jaafar <i className='ti-heart'></i>
+                    {/* Dato Seri Rosli Bin Jaafar <i className='ti-heart'></i> */}
                   </h6>{' '}
                   <span>The Groom's Father</span>
                   <p>
@@ -41,7 +41,7 @@ function Welcoming() {
               <div className='info valign'>
                 <div className='full-width'>
                   <h6>
-                    Datin Seri Asliza Binti Abd Jalil<i className='ti-heart'></i>
+                    {/* Datin Seri Asliza Binti Abd Jalil<i className='ti-heart'></i> */}
                   </h6>{' '}
                   <span>The Groom's Mother</span>
                   <p>
@@ -60,7 +60,7 @@ function Welcoming() {
             data-animate-effect='fadeInUp'
           >
             <h3 className='oliven-couple-title'>Thank You</h3>
-            <h2 className='oliven-title'>You are coming to our special day event!</h2>
+            <h2 className='oliven-title'>For coming to our special day event!</h2>
             <h4 className='oliven-couple-subtitle'>
               June 10, 2023 — The Light Hotel,Penang
             </h4>
